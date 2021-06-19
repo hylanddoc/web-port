@@ -4,7 +4,7 @@
 <title>GameSite Project</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="../../css/portfolio-styles.css" rel="stylesheet" type="text/css">
+<link href="portfolio-styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <nav class="navbar">
@@ -14,11 +14,11 @@
         <button type="button" id="projectsbtn" class="thisnavitem">PROJECTS</button> 
         <button type="button" id="contactbtn" class="navitem">CONTACT</button> 
             <div class="navbar-icons">
-                <img id="homeicn" src="../../graphics/icons/home_icon.svg" class="navicon" alt="home icon" title="Home">
-                <img id="abouticn" src="../../graphics/icons/about_icon.svg" class="navicon" alt="about icon" title="AboutMe">
-                <img id="skillsicn" src="../../graphics/icons/skills_icon.svg" class="navicon" alt="skills icon" title="MySkills">
-                <img id="projecticn" src="../../graphics/icons/projects_icon.svg" class="thisnavicon" alt="projects icon" title="MyProjects">
-                <img id="contacticn" src="../../graphics/icons/contacts_icon.svg" class="navicon" alt="contacts icon" title="ContactMe">
+                <img id="homeicn" src="home_icon.svg" class="navicon" alt="home icon" title="Home">
+                <img id="abouticn" src="about_icon.svg" class="navicon" alt="about icon" title="AboutMe">
+                <img id="skillsicn" src="skills_icon.svg" class="navicon" alt="skills icon" title="MySkills">
+                <img id="projecticn" src="projects_icon.svg" class="thisnavicon" alt="projects icon" title="MyProjects">
+                <img id="contacticn" src="contacts_icon.svg" class="navicon" alt="contacts icon" title="ContactMe">
             </div>
     </nav>
 
@@ -37,7 +37,7 @@
                 The home page would contain all the necessary information rquired for the days instruction and liinks to assoiated sections such as adding a new booking, viewing and updating puipils progress record, adding payment records etc. As well as any messages/reminders that could potentially affect lessons or travel between lessons.</p>                 
             </section>    
             <section class="grid-container-2x5cols-article">   
-                 <img src="../../graphics/images/driving1.png" class="width100 imgcrsr" alt="Driving School Home Page"  id="driving1">         
+                 <img src="driving1.png" class="width100 imgcrsr" alt="Driving School Home Page"  id="driving1">         
             </section>
         </div>
     <!-- The Modal -->
@@ -83,19 +83,19 @@ elContact.addEventListener('click', function(){gotoPage('contact');}, false);
 function gotoPage(pg) {
     switch (pg) {
     case 'home':
-    pagelink = "../../index.html";
-    break;
-    case 'about':
-    pagelink = "../about.html";
-    break;
-    case 'skills':
-    pagelink = "../skills.html";
-    break;
-    case 'projects':
     pagelink = "index.html";
     break;
+    case 'about':
+    pagelink = "about.html";
+    break;
+    case 'skills':
+    pagelink = "skills.html";
+    break;
+    case 'projects':
+    pagelink = "projects.html";
+    break;
     case 'contact':
-    pagelink = "../contact.html";
+    pagelink = "contact.html";
     break;        
      }
       
@@ -103,7 +103,7 @@ document.location.href=pagelink;
 }
 
 function showModal(str, lt) {
-let imgsc = "../../graphics/images/driving1.png";
+let imgsc = "driving1.png";
 //  page modal
 let modal = document.getElementById("myModal");
 
