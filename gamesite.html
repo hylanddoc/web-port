@@ -4,7 +4,7 @@
 <title>GameSite Project</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="../../css/portfolio-styles.css" rel="stylesheet" type="text/css">
+<link href="portfolio-styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <nav class="navbar">
@@ -14,11 +14,11 @@
         <button type="button" id="projectsbtn" class="thisnavitem">PROJECTS</button> 
         <button type="button" id="contactbtn" class="navitem">CONTACT</button> 
             <div class="navbar-icons">
-                <img id="homeicn" src="../../graphics/icons/home_icon.svg" class="navicon" alt="home icon" title="Home">
-                <img id="abouticn" src="../../graphics/icons/about_icon.svg" class="navicon" alt="about icon" title="AboutMe">
-                <img id="skillsicn" src="../../graphics/icons/skills_icon.svg" class="navicon" alt="skills icon" title="MySkills">
-                <img id="projecticn" src="../../graphics/icons/projects_icon.svg" class="thisnavicon" alt="projects icon" title="MyProjects">
-                <img id="contacticn" src="../../graphics/icons/contacts_icon.svg" class="navicon" alt="contacts icon" title="ContactMe">
+                <img id="homeicn" src="home_icon.svg" class="navicon" alt="home icon" title="Home">
+                <img id="abouticn" src="about_icon.svg" class="navicon" alt="about icon" title="AboutMe">
+                <img id="skillsicn" src="skills_icon.svg" class="navicon" alt="skills icon" title="MySkills">
+                <img id="projecticn" src="projects_icon.svg" class="thisnavicon" alt="projects icon" title="MyProjects">
+                <img id="contacticn" src="contacts_icon.svg" class="navicon" alt="contacts icon" title="ContactMe">
             </div>
     </nav>
 
@@ -39,13 +39,13 @@
             <section class="grid-container-2x5cols-article">   
                 <div class="grid-container-3eqcols">
                     <article class="grid-container-3eqcols-col">
-                        <img src="../../graphics/images/gs1.png" class="width80 imgcrsr" alt="Game Site Periods"  id="gs1">  
+                        <img src="gs1.png" class="width80 imgcrsr" alt="Game Site Periods"  id="gs1">  
                     </article>
                     <article class="grid-container-3eqcols-col">
-                        <img src="../../graphics/images/gs2.png" class="width80 imgcrsr" alt="Game Site WW2 Rules"  id="gs2">  
+                        <img src="gs2.png" class="width80 imgcrsr" alt="Game Site WW2 Rules"  id="gs2">  
                     </article>
                     <article class="grid-container-3eqcols-col">
-                        <img src="../../graphics/images/gs3.png" class="width80 imgcrsr" alt="Game Site WW2 Rapid Fire Documents"  id="gs3">  
+                        <img src="gs3.png" class="width80 imgcrsr" alt="Game Site WW2 Rapid Fire Documents"  id="gs3">  
                     </article>
                 </div>
             </section>
@@ -98,19 +98,19 @@ elContact.addEventListener('click', function(){gotoPage('contact');}, false);
 function gotoPage(pg) {
 switch (pg) {
     case 'home':
-    pagelink = "../../index.html";
-    break;
-    case 'about':
-    pagelink = "../about.html";
-    break;
-    case 'skills':
-    pagelink = "../skills.html";
-    break;
-    case 'projects':
     pagelink = "index.html";
     break;
+    case 'about':
+    pagelink = "about.html";
+    break;
+    case 'skills':
+    pagelink = "skills.html";
+    break;
+    case 'projects':
+    pagelink = "projects.html";
+    break;
     case 'contact':
-    pagelink = "../contact.html";
+    pagelink = "contact.html";
     break;        
     }
       
@@ -127,13 +127,13 @@ let captionText = document.getElementById("caption");
 // fetch larger image to show in modal
 switch (str) {
     case "gs1":
-    imgsc = "../../graphics/images/gs1.png";
+    imgsc = "gs1.png";
     break;
     case "gs2":
-    imgsc = "../../graphics/images/gs2.png";
+    imgsc = "gs2.png";
     break;
     case "gs3":
-    imgsc = "../../graphics/images/gs3.png";
+    imgsc = "gs3.png";
     break; 
     }
 modal.style.display = "block";
