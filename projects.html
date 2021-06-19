@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Projects</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="../../css/portfolio-styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <nav class="navbar">
+        <button type="button" id="homebtn" class="navitem">HOME</button> 
+        <button type="button" id="aboutbtn" class="navitem">ABOUT</button> 
+        <button type="button" id="skillsbtn" class="navitem">SKILLS</button> 
+        <button type="button" id="projectsbtn" class="thisnavitem">PROJECTS</button> 
+        <button type="button" id="contactbtn" class="navitem">CONTACT</button> 
+            <div class="navbar-icons">
+                <img id="homeicn" src="../../graphics/icons/home_icon.svg" class="navicon" alt="home icon" title="Home">
+                <img id="abouticn" src="../../graphics/icons/about_icon.svg" class="navicon" alt="about icon" title="AboutMe">
+                <img id="skillsicn" src="../../graphics/icons/skills_icon.svg" class="navicon" alt="skills icon" title="MySkills">
+                <img id="projecticn" src="../../graphics/icons/projects_icon.svg" class="thisnavicon" alt="projects icon" title="MyProjects">
+                <img id="contacticn" src="../../graphics/icons/contacts_icon.svg" class="navicon" alt="contacts icon" title="ContactMe">
+            </div>
+    </nav>
+
+    <main class="page-container">   
+        <p class="heading-page tac"><span class="heading-page-thin">My</span>PROJECTS</p>      
+        <section class="grid-container-3eqcols">   
+            <article class="grid-container-3eqcols-col">                            
+                <img src="../../graphics/images/romsot-home.png" id="romsot2" class="width100" alt="RomSoT Image">
+            </article>
+
+            <article class="grid-container-3eqcols-col">
+                <img src="../../graphics/images/gs-home.png" id="gamesite" class="width100" alt="GameSite Image" title="GameSite Home Page Image">   
+            </article>
+
+            <article class="grid-container-3eqcols-col">
+                <img src="../../graphics/images/driving-home.png" id="drivingschool" class="width100" alt="Driving School Image">
+           </article>
+
+            <article class="grid-container-3eqcols-col">
+                <img src="../../graphics/images/ybb-home.png" id="yorksbb" class="width100" alt="Yorkshire & Humberside BB Image">
+           </article>
+        </section> 
+    </main>
+
+<script>
+//EVENT LISTENERS
+let elRomsot = document.getElementById('romsot2');
+elRomsot.addEventListener('click', function() {document.location.href="romsot.html";}, false);
+elRomsot.addEventListener('mouseover', function() {elRomsot.classList.add("project-image-in"); elRomsot.classList.remove("project-image-out");}, false);
+elRomsot.addEventListener('mouseout', function() {elRomsot.classList.add("project-image-out"); elRomsot.classList.remove("project-image-in");}, false);
+
+let elGame = document.getElementById('gamesite');
+elGame.addEventListener('click', function() {document.location.href="gamesite.html";}, false);
+elGame.addEventListener('mouseover', function() {elGame.classList.add("project-image-in"); elGame.classList.remove("project-image-out");}, false);
+elGame.addEventListener('mouseout', function() {elGame.classList.add("project-image-out"); elGame.classList.remove("project-image-in");}, false);
+
+let elDriving = document.getElementById('drivingschool');
+elDriving.addEventListener('click', function() {document.location.href="drivingschool.html";}, false);
+elDriving.addEventListener('mouseover', function() {elDriving.classList.add("project-image-in"); elDriving.classList.remove("project-image-out");}, false);
+elDriving.addEventListener('mouseout', function() {elDriving.classList.add("project-image-out"); elDriving.classList.remove("project-image-in");}, false);
+
+let elYbb = document.getElementById('yorksbb');
+elYbb.addEventListener('click', function() {document.location.href="yorksbb.html";}, false);
+elYbb.addEventListener('mouseover', function() {elYbb.classList.add("project-image-in"); elYbb.classList.remove("project-image-out");}, false);
+elYbb.addEventListener('mouseout', function() {elYbb.classList.add("project-image-out"); elYbb.classList.remove("project-image-in");}, false);
+
+// NAV BUTTONS
+let elHomea = document.getElementById('homebtn');
+elHomea.addEventListener('click', function(){gotoPage('home');}, false);
+let elAbouta = document.getElementById('aboutbtn');
+elAbouta.addEventListener('click', function(){gotoPage('about');}, false);
+let elSkillsa = document.getElementById('skillsbtn');
+elSkillsa.addEventListener('click', function(){gotoPage('skills');}, false);
+let elProjecta = document.getElementById('projectsbtn');
+elProjecta.addEventListener('click', function(){gotoPage('projects');}, false);
+let elContacta = document.getElementById('contactbtn');
+elContacta.addEventListener('click', function(){gotoPage('contact');}, false);
+
+// NAV ICONS
+let elHome = document.getElementById('homeicn');
+elHome.addEventListener('click', function(){gotoPage('home');}, false);
+let elAbout = document.getElementById('abouticn');
+elAbout.addEventListener('click', function(){gotoPage('about');}, false);
+let elSkills = document.getElementById('skillsicn');
+elSkills.addEventListener('click', function(){gotoPage('skills');}, false);
+let elProject = document.getElementById('projecticn');
+elProject.addEventListener('click', function(){gotoPage('projects');}, false);
+let elContact = document.getElementById('contacticn');
+elContact.addEventListener('click', function(){gotoPage('contact');}, false);
+
+// FUNCTIONS
+
+function gotoPage(pg) {
+    switch (pg) {
+        case 'home':
+        pagelink = "../../index.html";
+        break;
+        case 'about':
+        pagelink = "../about.html";
+        break;
+        case 'skills':
+        pagelink = "../skills.html";
+        break;
+        case 'projects':
+        pagelink = "index.html";
+        break;
+        case 'contact':
+        pagelink = "../contact.html";
+        break;        
+    }
+
+    document.location.href=pagelink;
+}
+   
+    </script>
+</body>
+</html>
