@@ -4,7 +4,7 @@
 <title>My Skills</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="../css/portfolio-styles.css" rel="stylesheet" type="text/css">
+<link href="portfolio-styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <nav class="navbar">
@@ -14,11 +14,11 @@
         <button type="button" id="projectsbtn" class="navitem">PROJECTS</button> 
         <button type="button" id="contactbtn" class="navitem">CONTACT</button> 
             <div class="navbar-icons">
-                <img id="homeicn" src="../graphics/icons/home_icon.svg" class="navicon" alt="home icon" title="Home">
-                <img id="abouticn" src="../graphics/icons/about_icon.svg" class="navicon" alt="about icon" title="AboutMe">
-                <img id="skillsicn" src="../graphics/icons/skills_icon.svg" class="thisnavicon" alt="skills icon" title="MySkills">
-                <img id="projecticn" src="../graphics/icons/projects_icon.svg" class="navicon" alt="projects icon" title="MyProjects">
-                <img id="contacticn" src="../graphics/icons/contacts_icon.svg" class="navicon" alt="contacts icon" title="ContactMe">
+                <img id="homeicn" src="home_icon.svg" class="navicon" alt="home icon" title="Home">
+                <img id="abouticn" src="about_icon.svg" class="navicon" alt="about icon" title="AboutMe">
+                <img id="skillsicn" src="skills_icon.svg" class="thisnavicon" alt="skills icon" title="MySkills">
+                <img id="projecticn" src="projects_icon.svg" class="navicon" alt="projects icon" title="MyProjects">
+                <img id="contacticn" src="contacts_icon.svg" class="navicon" alt="contacts icon" title="ContactMe">
             </div>
     </nav>
 
@@ -29,30 +29,27 @@
     <section class="grid-container-3eqcols">   
         
         <article class="grid-container-3eqcols-article"> 
-            <img src="../graphics/logos/html5.png" class="width40" alt="HTML5 Logo" title="HTML5 Logo" id="">
+            <img src="html5.png" class="width40" alt="HTML5 Logo" title="HTML5 Logo" id="">
         </article>
         <article class="grid-container-3eqcols-article"> 
-            <img src="../graphics/logos/css3.png" class="width40" alt="HTML5 Logo" title="HTML5 Logo" id="">
+            <img src="css3.png" class="width40" alt="HTML5 Logo" title="HTML5 Logo" id="">
         </article>
         <article class="grid-container-3eqcols-article"> 
-            <img src="../graphics/logos/javascript.png" class="width40" alt="HTML5 Logo" title="HTML5 Logo" id="">
+            <img src="javascript.png" class="width40" alt="HTML5 Logo" title="HTML5 Logo" id="">
         </article>
         <article class="grid-container-3eqcols-article"> 
-            <img src="../graphics/logos/php.png" class="width40" alt="HTML5 Logo" title="HTML5 Logo" id="">
+            <img src="php.png" class="width40" alt="HTML5 Logo" title="HTML5 Logo" id="">
         </article>
         <article class="grid-container-3eqcols-article"> 
-            <img src="../graphics/logos/mysql.png" class="width40" alt="HTML5 Logo" title="HTML5 Logo" id="">
+            <img src=".png" class="width40" alt="HTML5 Logo" title="HTML5 Logo" id="">
         </article>
     </section>
 
     
 </main>
-</body>
 
 <script>
-    //JS to show hide text for each image
-  
-  
+      
   // EVENT LISTENERS
   // NAV BUTTONS
   let elHomea = document.getElementById('homebtn');
@@ -81,27 +78,26 @@
   // FUNCTIONS
   
   function gotoPage(pg) {
-          switch (pg) {
-              case 'home':
-              pagelink = "../index.html";
-              break;
-              case 'about':
-              pagelink = "about.html";
-              break;
-              case 'skills':
-              pagelink = "skills.html";
-              break;
-              case 'projects':
-              pagelink = "projects/index.html";
-              break;
-              case 'contact':
-              pagelink = "contact.html";
-              break;        
-          }
-      
+    switch (pg) {
+    case 'home':
+    pagelink = "index.html";
+    break;
+    case 'about':
+    pagelink = "about.html";
+    break;
+    case 'skills':
+    pagelink = "skills.html";
+    break;
+    case 'projects':
+    pagelink = "projects.html";
+    break;
+    case 'contact':
+    pagelink = "contact.html";
+    break;        
+     }
           document.location.href=pagelink;
-      }
-  
+  }
   
   </script>
+</body>
 </html>
