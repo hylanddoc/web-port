@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Lee's Portfolio</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/portfolio-styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <nav class="navbar">
+        <button type="button" id="homebtn" class="thisnavitem">HOME</button> 
+        <button type="button" id="aboutbtn" class="navitem">ABOUT</button> 
+        <button type="button" id="skillsbtn" class="navitem">SKILLS</button> 
+        <button type="button" id="projectsbtn" class="navitem">PROJECTS</button> 
+        <button type="button" id="contactbtn" class="navitem">CONTACT</button> 
+            <div class="navbar-icons">
+                <img id="homeicn" src="graphics/icons/home_icon.svg" class="thisnavicon" alt="home icon" title="Home">
+                <img id="abouticn" src="graphics/icons/about_icon.svg" class="navicon" alt="about icon" title="AboutMe">
+                <img id="skillsicn" src="graphics/icons/skills_icon.svg" class="navicon" alt="skills icon" title="MySkills">
+                <img id="projecticn" src="graphics/icons/projects_icon.svg" class="navicon" alt="projects icon" title="MyProjects">
+                <img id="contacticn" src="graphics/icons/contacts_icon.svg" class="navicon" alt="contacts icon" title="ContactMe">
+            </div>
+    </nav>
+    <main class="home-page-container">
+              
+        <section class="home-section">
+            <p class="heading-page tal"><span class="heading-page-thin">INTRODUCING...</span></p>
+            <h1>Lee Hyland</h1>
+            <h3>Web Developer</h3>
+            <h6 class="tac">"Keeping it Simple"</h6>
+        </section>       
+              
+    </main>
+
+    <script>
+        //JS to show hide text for each image
+      
+      
+      // EVENT LISTENERS
+      // NAV BUTTONS
+      let elHomea = document.getElementById('homebtn');
+      elHomea.addEventListener('click', function(){gotoPage('home');}, false);
+      let elAbouta = document.getElementById('aboutbtn');
+      elAbouta.addEventListener('click', function(){gotoPage('about');}, false);
+      let elSkillsa = document.getElementById('skillsbtn');
+      elSkillsa.addEventListener('click', function(){gotoPage('skills');}, false);
+      let elProjecta = document.getElementById('projectsbtn');
+      elProjecta.addEventListener('click', function(){gotoPage('projects');}, false);
+      let elContacta = document.getElementById('contactbtn');
+      elContacta.addEventListener('click', function(){gotoPage('contact');}, false);
+      
+      // NAV ICONS
+      let elHome = document.getElementById('homeicn');
+      elHome.addEventListener('click', function(){gotoPage('home');}, false);
+      let elAbout = document.getElementById('abouticn');
+      elAbout.addEventListener('click', function(){gotoPage('about');}, false);
+      let elSkills = document.getElementById('skillsicn');
+      elSkills.addEventListener('click', function(){gotoPage('skills');}, false);
+      let elProject = document.getElementById('projecticn');
+      elProject.addEventListener('click', function(){gotoPage('projects');}, false);
+      let elContact = document.getElementById('contacticn');
+      elContact.addEventListener('click', function(){gotoPage('contact');}, false);
+      
+      // FUNCTIONS
+      
+      function gotoPage(pg) {
+          switch (pg) {
+              case 'home':
+              pagelink = "index.html";
+              break;
+              case 'about':
+              pagelink = "pages/about.html";
+              break;
+              case 'skills':
+              pagelink = "pages/skills.html";
+              break;
+              case 'projects':
+              pagelink = "pages/projects/index.html";
+              break;
+              case 'contact':
+              pagelink = "pages/contact.html";
+              break;        
+          }
+      
+          document.location.href=pagelink;
+      }
+      
+      
+      </script>
+
+</body>
+</html>

@@ -1,0 +1,459 @@
+
+.background-blue {
+    background-color: rgb(100 180 240 /20%);
+}
+
+.grid-container-1col {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 20px;    
+    align-self:  center;
+    justify-content: left;
+    justify-items: center;
+    max-height: 100%;
+    height: auto;
+    width: 100%;
+    margin-top: 0px;
+}
+
+.grid-container-1col-article {
+    justify-self: start;
+    align-self: start;  
+    width: 95%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.grid-container-2x5cols {
+    background-color: rgb(255 255 255 /100%);
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    grid-template-rows: auto;
+    column-gap: 50px;
+    row-gap: 20px;    
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    max-height: 100%;
+    height: 100%;
+    width: 100%;
+    margin-top: 0;
+    /*margin-left: auto;
+    margin-right: auto;*/
+}
+
+.grid-container-2x5cols-article {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    justify-self: start;
+    align-self: start;  
+    width: 100%;
+}
+
+.grid-container-3eqcols {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    row-gap: 0px;
+    column-gap: 0px;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    align-self: start;
+    padding: 0% 10%;
+}
+
+.grid-container-3eqcols-article {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    justify-self: start;
+    align-self: start;  
+    width: 100%;
+}
+
+h1 {
+    font-family: Helvetica;
+    font-size: 20pt;
+    color: rgb(0 0 0 /80%);
+}
+
+h2 {
+    font-family: Helvetica;
+    font-size: 18pt;
+    color: rgb(0 0 0 /100%);
+}
+
+h3 {
+    font-family: Helvetica;
+    font-size: 16pt;
+    font-weight: bold;
+    color: rgb(0 0 0 /100%);
+}
+
+h4 {
+    font-family: Helvetica;
+    font-size: 16pt;
+    font-weight: normal;
+    color: rgb(100 200 255 /100%);
+}
+h6 {
+    font-family: Helvetica;
+    font-size: 18pt;
+    font-weight: bold;
+    font-style: italic;
+    color: rgb(0 0 0 /75%);
+}
+
+.heading-page {
+    font-family: Helvetica;
+    font-size: 20pt;
+    font-weight: 700;
+    color: rgb(0 0 0 /100%);
+}
+
+.heading-page-thin {
+    font-family: Helvetica;
+    font-size: 20pt;
+    font-weight: 500;
+    color: rgb(100 200 225 / 100%);
+}
+
+.home-page-container {
+    background-color: rgb(255 255 255 /100%);
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    grid-template-rows: auto;
+    row-gap: 20px;
+    justify-items: left;
+    align-self: start;
+    max-height: 100%;
+    height: 100%;
+    max-width: 80%;
+    width: 80%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home-section {
+    justify-self: left;
+    align-content: center;
+    padding: 10% 15%;
+    width: 100%;
+}
+
+.imgcrsr {
+    cursor: pointer;
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+  }
+  
+  .modal-header {
+    padding: 2px 16px;
+    background-color: rgb(220 240 255 / 50%);
+    color: #F1F1F1;
+  }
+  
+  .modal-footer {
+    padding: 2px 16px;
+    background-color: rgb(255 255 255 / 50%);
+    color: #F1F1F1;
+  }
+  
+  .modal-txt-content {
+    font-family: Verdana;
+    font-size: 14pt;
+    color: rgb(0 200 255 / 100%);
+    position: relative;
+    margin: auto;
+    padding: 0;
+    border: 1px solid rgb(180 180 180 / 50%);
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+  
+  /* Caption of Modal Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    font-family: Verdana;
+    font-size: 14pt;
+    color: rgb(255 255 255 /100%);
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .modal-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: rgb(210 210 210 / 100%);
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .modal-close:hover,
+  .modal-close:focus {
+    color: rgb(0 200 255 /100%);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  /* MODAL END */
+
+.navbar { 
+    display: flex;   
+    background-color: rgb(0 0 0 /100%);
+    overflow: hidden;
+    height: auto;
+    padding-left: 10%;
+    border-bottom: 3px solid rgb(0 200 255 /100%);
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-family: Helvetica;
+    font-size: 14pt;
+    
+}
+
+.navbar a:hover {
+    color: rgb(0 200 225 / 100%);
+}
+
+.navbar-icons {
+    display: none;
+}
+
+.navicon {
+    width: 35px;
+    height: 35px;
+    padding: 5px 10px;
+}
+
+.navitem {
+    display: block;
+    background-color: rgb(0 0 0 /100%);
+    border: 0;
+    color: rgb(255 255 255 / 90%);
+    font-family: Helvetica;
+    font-size: 14pt;
+    padding: 15px 25px;
+}
+
+.navitem:hover {
+    color: rgb(0 200 225 / 100%);
+}
+
+p {
+    font-family: Helvetica;
+    font-size: 12pt;
+    color: rgb(0 0 0 /100%);
+}
+
+.page-container {
+    background-color: rgb(255 255 255 /100%);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 20px;    
+    align-self:  start;
+    max-height: 100%;
+    height: 100%;
+    width: 80%;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-pic {
+    position: relative;
+    width: 80%;
+    margin-top: 50px;
+}
+
+.project-heading {
+    margin-top: 0px;
+    background-color: rgb(50 150 225 /60%);
+    font-family: Arial;
+    font-size: 14pt;
+    color: rgb(255 255 255 /100%);
+    padding: 2px 5px;
+}
+
+.project-image-in {
+    transform: skew(-2deg);
+}
+
+.project-image-out {
+    transform: skew(0deg);
+}
+
+.tal {
+    text-align: left;
+}
+
+.tac {
+    text-align: center;
+}
+
+.tar {
+    text-align: right;
+}
+
+.thisnavicon {
+    width: 35px;
+    height: 35px;
+    padding: 5px 10px;
+    filter: opacity(0.8) sepia(1) hue-rotate(125deg);
+}
+.thisnavitem {
+    display: block;
+    background-color: rgb(0 0 0 /100%);
+    border: 0;
+    color: rgb(0 200 225 / 100%);
+    font-family: Helvetica;
+    font-size: 14pt;
+    padding: 15px 25px;
+}
+
+.thisnavitem:hover {
+    color: rgb(0 200 225 / 100%);
+}
+
+.width10 {
+    width: 10%;
+}
+
+.width20 {
+    width: 20%;
+}
+
+.width30 {
+    width: 30%;
+}
+
+.width40 {
+    width: 40%;
+}
+
+.width80 {
+    width: 80%;
+}
+
+.width100 {
+    width: 100%;
+}
+
+@media only screen and (min-width: 360px) and (max-width: 800px) {
+    .grid-container-2x5cols {
+        grid-template-columns: 1fr;
+    }
+    .grid-container-2x5cols-article {
+        display: inline;
+    }
+    .grid-container-3eqcols {
+        grid-template-columns: 1fr;  
+    }
+    .home-page-container{
+        grid-template-columns: 1fr;
+        margin-left: 0%;
+    }
+    .home-button-container {
+        padding: 0px 0px;
+    }
+    .modal-content {
+        width: 100%;
+    }
+    .navbar {
+        padding-left: 0%;
+    }
+    .navbar-icons {
+        display: block;
+        cursor: pointer;
+    }
+    .navitem {
+        display: none;
+    }
+    .profile-pic {
+        position: relative;
+        width: 80%;
+        padding-left: 10%;
+    }
+    .thisnavitem {
+        display: none;
+    }
+}
+    
+@media only screen and (min-width: 801px) and (max-width: 1200px) {
+    .grid-container-2x5cols {
+        grid-template-columns: 1fr;
+    }
+    .grid-container-2x5cols-article {
+        display: inline;
+    }
+    .grid-container-3eqcols {
+        grid-template-columns: 1fr;  
+    }
+    .home-page-container{
+        grid-template-columns: 1fr;
+        margin-left: 0%;
+    }
+    .home-button-container {
+        padding: 0px 0px;
+    }
+    .modal-content {
+        width: 90%;
+    }
+    .navbar {
+        padding-left: 0%;
+    }
+    .profile-pic {
+        position: relative;
+        width: 80%;
+        padding-left: 10%;
+    }
+    
+}
+
+
+
+

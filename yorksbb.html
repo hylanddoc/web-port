@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>GameSite Project</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="../../css/portfolio-styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <nav class="navbar">
+        <button type="button" id="homebtn" class="navitem">HOME</button> 
+        <button type="button" id="aboutbtn" class="navitem">ABOUT</button> 
+        <button type="button" id="skillsbtn" class="navitem">SKILLS</button> 
+        <button type="button" id="projectsbtn" class="thisnavitem">PROJECTS</button> 
+        <button type="button" id="contactbtn" class="navitem">CONTACT</button> 
+            <div class="navbar-icons">
+                <img id="homeicn" src="../../graphics/icons/home_icon.svg" class="navicon" alt="home icon" title="Home">
+                <img id="abouticn" src="../../graphics/icons/about_icon.svg" class="navicon" alt="about icon" title="AboutMe">
+                <img id="skillsicn" src="../../graphics/icons/skills_icon.svg" class="navicon" alt="skills icon" title="MySkills">
+                <img id="projecticn" src="../../graphics/icons/projects_icon.svg" class="thisnavicon" alt="projects icon" title="MyProjects">
+                <img id="contacticn" src="../../graphics/icons/contacts_icon.svg" class="navicon" alt="contacts icon" title="ContactMe">
+            </div>
+    </nav>
+
+    <main class="page-container">
+        <div class="grid-container-2x5cols">
+            <!--  Title Row --> 
+                    <section class="grid-container-2x5cols-article">          
+                        <p class="heading-page tac">Yorkshire & Humberside Boys' Brigade <span class="heading-page-thin">Project</span></p>
+                    </section>
+                    <section class="grid-container-2x5cols-article">    
+                        <h4>A static site to advetise the Yorkshire & Humberside District of The Boys' Brigade.</h4>
+                    </section>
+            <!--  Row 1 --> 
+                    <section class="grid-container-2x5cols-article">            
+                        <p>As I was maintaining the Website for The Boys' Brigade in Hull and East Yorkshire, I was asked by the distrct to design and maintain a new site for them.<br ><br >
+                        The site was a intended as a static site, updated reqularly with items of news. One of it's main functions was to provide details of The Boys' Brigade groups within Yorkshire and North Lincolnshire. In addition to pages providing information such as addresses and contact details, it also made use of a Google Map API to display a map showing the location of all the groups in the area.</p>                 
+                    </section>    
+                    <section class="grid-container-2x5cols-article">   
+                         <img src="../../graphics/images/yoksbb1.png" class="width100 imgcrsr" alt="Yorkshire BB Image"  id="yorksbb1">         
+                    </section>
+                </div>
+            <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <span class="modal-close">&times;</span>
+                    <img class="modal-content" id="yorksimg">
+                    <div id="caption"></div>
+                </div>  
+        
+    </main>
+<script>
+
+// EVENT LISTENERS
+// NAV BUTTONS
+let elHomea = document.getElementById('homebtn');
+elHomea.addEventListener('click', function(){gotoPage('home');}, false);
+let elAbouta = document.getElementById('aboutbtn');
+elAbouta.addEventListener('click', function(){gotoPage('about');}, false);
+let elSkillsa = document.getElementById('skillsbtn');
+elSkillsa.addEventListener('click', function(){gotoPage('skills');}, false);
+let elProjecta = document.getElementById('projectsbtn');
+elProjecta.addEventListener('click', function(){gotoPage('projects');}, false);
+let elContacta = document.getElementById('contactbtn');
+elContacta.addEventListener('click', function(){gotoPage('contact');}, false);
+      
+// NAV ICONS
+let elHome = document.getElementById('homeicn');
+elHome.addEventListener('click', function(){gotoPage('home');}, false);
+let elAbout = document.getElementById('abouticn');
+elAbout.addEventListener('click', function(){gotoPage('about');}, false);
+let elSkills = document.getElementById('skillsicn');
+elSkills.addEventListener('click', function(){gotoPage('skills');}, false);
+let elProject = document.getElementById('projecticn');
+elProject.addEventListener('click', function(){gotoPage('projects');}, false);
+let elContact = document.getElementById('contacticn');
+elContact.addEventListener('click', function(){gotoPage('contact');}, false);
+
+// DISPLAY MODAL IMAGES
+let elBB1 = document.getElementById('yorksbb1');
+elBB1.addEventListener('click', function(){showModal('yorksbb1', this.alt);}, false);
+      
+// FUNCTIONS
+      
+function gotoPage(pg) {
+    switch (pg) {
+        case 'home':
+        pagelink = "../../index.html";
+        break;
+        case 'about':
+        pagelink = "../about.html";
+        break;
+        case 'skills':
+        pagelink = "../skills.html";
+        break;
+        case 'projects':
+        pagelink = "index.html";
+        break;
+        case 'contact':
+        pagelink = "../contact.html";
+        break;        
+    }
+    document.location.href=pagelink;
+}
+
+function showModal(str, lt) {
+let imgsc = "../../graphics/images/yoksbb1-large.png";
+//  page modal
+let modal = document.getElementById("myModal");
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+let img = document.getElementById(str);
+let modalImg = document.getElementById("yorksimg");
+let captionText = document.getElementById("caption");
+modal.style.display = "block";
+modalImg.src = imgsc;
+captionText.innerHTML = lt;
+
+// Get the <span> element that closes the modal
+let span = document.getElementsByClassName("modal-close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+modal.style.display = "none";
+    }
+}
+</script>
+    
+</body>
+</html>

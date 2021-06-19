@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>GameSite Project</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="../../css/portfolio-styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <nav class="navbar">
+        <button type="button" id="homebtn" class="navitem">HOME</button> 
+        <button type="button" id="aboutbtn" class="navitem">ABOUT</button> 
+        <button type="button" id="skillsbtn" class="navitem">SKILLS</button> 
+        <button type="button" id="projectsbtn" class="thisnavitem">PROJECTS</button> 
+        <button type="button" id="contactbtn" class="navitem">CONTACT</button> 
+            <div class="navbar-icons">
+                <img id="homeicn" src="../../graphics/icons/home_icon.svg" class="navicon" alt="home icon" title="Home">
+                <img id="abouticn" src="../../graphics/icons/about_icon.svg" class="navicon" alt="about icon" title="AboutMe">
+                <img id="skillsicn" src="../../graphics/icons/skills_icon.svg" class="navicon" alt="skills icon" title="MySkills">
+                <img id="projecticn" src="../../graphics/icons/projects_icon.svg" class="thisnavicon" alt="projects icon" title="MyProjects">
+                <img id="contacticn" src="../../graphics/icons/contacts_icon.svg" class="navicon" alt="contacts icon" title="ContactMe">
+            </div>
+    </nav>
+
+    <main class="page-container">
+        <div class="grid-container-2x5cols">
+    <!--  Title Row -->  
+            <section class="grid-container-2x5cols-article">         
+                <p class="heading-page tac">GameSite <span class="heading-page-thin">Project</span></p>
+            </section>
+            <section class="grid-container-2x5cols-article">    
+                <h4>A simplified interface of a personal database suited to use on mobile devides</h4>
+            </section>
+    <!--  Row 1 --> 
+            <section class="grid-container-2x5cols-article">            
+                    <p>Game SIte is a database driven website which stores a wide variety of information relating to a hobby. The mobile version of the website offers a simplified and responsive design to allow easy access to the extensive library of documents.<br ><br >
+                    The site makes use of accordian layouts to keep the essential menu elements on the screen and clickable images to navigate to the apprpriate list of documents.</p>                 
+            </section>    
+            <section class="grid-container-2x5cols-article">   
+                <div class="grid-container-3eqcols">
+                    <article class="grid-container-3eqcols-col">
+                        <img src="../../graphics/images/gs1.png" class="width80 imgcrsr" alt="Game Site Periods"  id="gs1">  
+                    </article>
+                    <article class="grid-container-3eqcols-col">
+                        <img src="../../graphics/images/gs2.png" class="width80 imgcrsr" alt="Game Site WW2 Rules"  id="gs2">  
+                    </article>
+                    <article class="grid-container-3eqcols-col">
+                        <img src="../../graphics/images/gs3.png" class="width80 imgcrsr" alt="Game Site WW2 Rapid Fire Documents"  id="gs3">  
+                    </article>
+                </div>
+            </section>
+        </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="gsimg">
+        <div id="caption"></div>
+    </div>    
+    </main>
+    
+<script>
+  
+// EVENT LISTENERS
+// NAV BUTTONS
+let elHomea = document.getElementById('homebtn');
+elHomea.addEventListener('click', function(){gotoPage('home');}, false);
+let elAbouta = document.getElementById('aboutbtn');
+elAbouta.addEventListener('click', function(){gotoPage('about');}, false);
+let elSkillsa = document.getElementById('skillsbtn');
+elSkillsa.addEventListener('click', function(){gotoPage('skills');}, false);
+let elProjecta = document.getElementById('projectsbtn');
+elProjecta.addEventListener('click', function(){gotoPage('projects');}, false);
+let elContacta = document.getElementById('contactbtn');
+elContacta.addEventListener('click', function(){gotoPage('contact');}, false);
+
+// DISPLAY MODAL IMAGES
+let elGs1 = document.getElementById('gs1');
+elGs1.addEventListener('click', function(){showModal('gs1', this.alt);}, false);
+let elGs2 = document.getElementById('gs2');
+elGs2.addEventListener('click', function(){showModal('gs2', this.alt);}, false);
+let elGs3 = document.getElementById('gs3');
+elGs3.addEventListener('click', function(){showModal('gs3', this.alt);}, false);
+            
+// NAV ICONS
+let elHome = document.getElementById('homeicn');
+ elHome.addEventListener('click', function(){gotoPage('home');}, false);
+let elAbout = document.getElementById('abouticn');
+elAbout.addEventListener('click', function(){gotoPage('about');}, false);
+let elSkills = document.getElementById('skillsicn');
+elSkills.addEventListener('click', function(){gotoPage('skills');}, false);
+let elProject = document.getElementById('projecticn');
+elProject.addEventListener('click', function(){gotoPage('projects');}, false);
+let elContact = document.getElementById('contacticn');
+elContact.addEventListener('click', function(){gotoPage('contact');}, false);
+      
+// FUNCTIONS
+    // selects page from navbar
+function gotoPage(pg) {
+switch (pg) {
+    case 'home':
+    pagelink = "../../index.html";
+    break;
+    case 'about':
+    pagelink = "../about.html";
+    break;
+    case 'skills':
+    pagelink = "../skills.html";
+    break;
+    case 'projects':
+    pagelink = "index.html";
+    break;
+    case 'contact':
+    pagelink = "../contact.html";
+    break;        
+    }
+      
+ document.location.href=pagelink;
+}     
+     
+function showModal(str, lt) {
+//  page modal
+let modal = document.getElementById("myModal");
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+let img = document.getElementById(str);
+let modalImg = document.getElementById("gsimg");
+let captionText = document.getElementById("caption");
+// fetch larger image to show in modal
+switch (str) {
+    case "gs1":
+    imgsc = "../../graphics/images/gs1.png";
+    break;
+    case "gs2":
+    imgsc = "../../graphics/images/gs2.png";
+    break;
+    case "gs3":
+    imgsc = "../../graphics/images/gs3.png";
+    break; 
+    }
+modal.style.display = "block";
+modalImg.src = imgsc;
+captionText.innerHTML = lt;
+
+// Get the <span> element that closes the modal
+let span = document.getElementsByClassName("modal-close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+modal.style.display = "none";
+    }
+}
+</script>
+    
+</body>
+</html>

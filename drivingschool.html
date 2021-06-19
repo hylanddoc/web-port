@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>GameSite Project</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="../../css/portfolio-styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <nav class="navbar">
+        <button type="button" id="homebtn" class="navitem">HOME</button> 
+        <button type="button" id="aboutbtn" class="navitem">ABOUT</button> 
+        <button type="button" id="skillsbtn" class="navitem">SKILLS</button> 
+        <button type="button" id="projectsbtn" class="thisnavitem">PROJECTS</button> 
+        <button type="button" id="contactbtn" class="navitem">CONTACT</button> 
+            <div class="navbar-icons">
+                <img id="homeicn" src="../../graphics/icons/home_icon.svg" class="navicon" alt="home icon" title="Home">
+                <img id="abouticn" src="../../graphics/icons/about_icon.svg" class="navicon" alt="about icon" title="AboutMe">
+                <img id="skillsicn" src="../../graphics/icons/skills_icon.svg" class="navicon" alt="skills icon" title="MySkills">
+                <img id="projecticn" src="../../graphics/icons/projects_icon.svg" class="thisnavicon" alt="projects icon" title="MyProjects">
+                <img id="contacticn" src="../../graphics/icons/contacts_icon.svg" class="navicon" alt="contacts icon" title="ContactMe">
+            </div>
+    </nav>
+
+    <main class="page-container">
+        <div class="grid-container-2x5cols">
+    <!--  Title Row --> 
+            <section class="grid-container-2x5cols-article">          
+                <p class="heading-page tac">Driving School <span class="heading-page-thin">Project</span></p>
+            </section>
+            <section class="grid-container-2x5cols-article">    
+                <h4>A site to manage my driving instruction business as an alternative to commercially available applications.</h4>
+            </section>
+    <!--  Row 1 --> 
+            <section class="grid-container-2x5cols-article">            
+                <p>The site was designed for use on a netbook where page scrolling was to be minimised.<br ><br >
+                The home page would contain all the necessary information rquired for the days instruction and liinks to assoiated sections such as adding a new booking, viewing and updating puipils progress record, adding payment records etc. As well as any messages/reminders that could potentially affect lessons or travel between lessons.</p>                 
+            </section>    
+            <section class="grid-container-2x5cols-article">   
+                 <img src="../../graphics/images/driving1.png" class="width100 imgcrsr" alt="Driving School Home Page"  id="driving1">         
+            </section>
+        </div>
+    <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <span class="modal-close">&times;</span>
+            <img class="modal-content" id="driveimg">
+            <div id="caption"></div>
+        </div>         
+    </main>
+
+<script>     
+// EVENT LISTENERS
+// NAV BUTTONS
+let elHomea = document.getElementById('homebtn');
+elHomea.addEventListener('click', function(){gotoPage('home');}, false);
+let elAbouta = document.getElementById('aboutbtn');
+elAbouta.addEventListener('click', function(){gotoPage('about');}, false);
+let elSkillsa = document.getElementById('skillsbtn');
+elSkillsa.addEventListener('click', function(){gotoPage('skills');}, false);
+let elProjecta = document.getElementById('projectsbtn');
+elProjecta.addEventListener('click', function(){gotoPage('projects');}, false);
+let elContacta = document.getElementById('contactbtn');
+elContacta.addEventListener('click', function(){gotoPage('contact');}, false);
+      
+// DISPLAY MODAL IMAGES
+let elDrive1 = document.getElementById('driving1');
+elDrive1.addEventListener('click', function(){showModal('driving1', this.alt);}, false);
+
+// NAV ICONS
+let elHome = document.getElementById('homeicn');
+elHome.addEventListener('click', function(){gotoPage('home');}, false);
+let elAbout = document.getElementById('abouticn');
+elAbout.addEventListener('click', function(){gotoPage('about');}, false);
+let elSkills = document.getElementById('skillsicn');
+elSkills.addEventListener('click', function(){gotoPage('skills');}, false);
+let elProject = document.getElementById('projecticn');
+elProject.addEventListener('click', function(){gotoPage('projects');}, false);
+let elContact = document.getElementById('contacticn');
+elContact.addEventListener('click', function(){gotoPage('contact');}, false);
+      
+// FUNCTIONS
+    // selects page from navbar      
+function gotoPage(pg) {
+    switch (pg) {
+    case 'home':
+    pagelink = "../../index.html";
+    break;
+    case 'about':
+    pagelink = "../about.html";
+    break;
+    case 'skills':
+    pagelink = "../skills.html";
+    break;
+    case 'projects':
+    pagelink = "index.html";
+    break;
+    case 'contact':
+    pagelink = "../contact.html";
+    break;        
+     }
+      
+document.location.href=pagelink;
+}
+
+function showModal(str, lt) {
+let imgsc = "../../graphics/images/driving1.png";
+//  page modal
+let modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+let img = document.getElementById(str);
+let modalImg = document.getElementById("driveimg");
+let captionText = document.getElementById("caption");
+modal.style.display = "block";
+modalImg.src = imgsc;
+captionText.innerHTML = lt;
+
+// Get the <span> element that closes the modal
+let span = document.getElementsByClassName("modal-close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+modal.style.display = "none";
+    }
+}
+</script> 
+</body>
+</html>
