@@ -1,6 +1,9 @@
+a {
+    color: rgb(0 150 225 /100%);
+}
 
-.background-blue {
-    background-color: rgb(100 180 240 /20%);
+a:hover {
+    color: rgb(100 200 255 /100%);
 }
 
 .grid-container-1col {
@@ -40,8 +43,6 @@
     height: 100%;
     width: 100%;
     margin-top: 0;
-    /*margin-left: auto;
-    margin-right: auto;*/
 }
 
 .grid-container-2x5cols-article {
@@ -75,6 +76,54 @@
     width: 100%;
 }
 
+.grid-container-3x2cols {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: auto;
+    column-gap: 50px;
+    row-gap: 20px;    
+    justify-items: center;
+    justify-content: center;
+    align-content: start;
+    align-self: start;
+    max-height: 100%;
+    height: 100%;
+    width: 100%;
+    margin-top: 0;
+}
+
+.grid-container-3x2cols-article {
+    display: grid;
+    align-items: start;
+    justify-items: start;
+    justify-self: start;
+    align-self: start;  
+    width: 100%;
+}
+
+.grid-container-skills {
+    background-color: rgb(255 255 255 /100%);
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    grid-template-rows: auto;
+    column-gap: 50px;
+    row-gap: 20px;    
+    justify-items: start;
+    justify-content: start;
+    align-content: flex-start;
+    align-self: flex-start;
+    max-height: 100%;
+    height: 100%;
+    width: 100%;
+    margin-top: 0;
+}
+
+.grid-container-skills-article {
+    justify-self: start;
+    align-self: start;  
+    width: 100%;
+}
+
 h1 {
     font-family: Helvetica;
     font-size: 20pt;
@@ -98,14 +147,15 @@ h4 {
     font-family: Helvetica;
     font-size: 16pt;
     font-weight: normal;
-    color: rgb(100 200 255 /100%);
+    color: rgb(0 150 225 / 100%);
 }
+
 h6 {
     font-family: Helvetica;
-    font-size: 18pt;
+    font-size: 24pt;
     font-weight: bold;
     font-style: italic;
-    color: rgb(0 0 0 /75%);
+    color: rgb(0 150 225 / 100%);
 }
 
 .heading-page {
@@ -119,7 +169,7 @@ h6 {
     font-family: Helvetica;
     font-size: 20pt;
     font-weight: 500;
-    color: rgb(100 200 225 / 100%);
+    color: rgb(0 150 225 / 100%);
 }
 
 .home-page-container {
@@ -149,6 +199,15 @@ h6 {
 .imgcrsr {
     cursor: pointer;
 }
+
+.keepsimple {
+    font-family: Helvetica;
+    font-size: 14pt;
+    font-weight: normal;
+    font-style: italic;
+    color: rgb(0 150 225 / 100%);
+}
+
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
@@ -160,8 +219,8 @@ h6 {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    background-color: rgb(0 0 0 / 100%); /* Fallback color */
+    background-color: rgb(0 0 0 / 90%); /* Black w/ opacity */
   }
   
   /* Modal Content (image) */
@@ -175,13 +234,13 @@ h6 {
   .modal-header {
     padding: 2px 16px;
     background-color: rgb(220 240 255 / 50%);
-    color: #F1F1F1;
+    color: rgb(242 242 242 / 100%);
   }
   
   .modal-footer {
     padding: 2px 16px;
     background-color: rgb(255 255 255 / 50%);
-    color: #F1F1F1;
+    color: rgb(242 242 242 / 100%);
   }
   
   .modal-txt-content {
@@ -193,7 +252,7 @@ h6 {
     padding: 0;
     border: 1px solid rgb(180 180 180 / 50%);
     width: 50%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%),0 6px 20px 0 rgb(0 0 0 / 95%);
     }
   
   /* Caption of Modal Image */
@@ -240,13 +299,13 @@ h6 {
     overflow: hidden;
     height: auto;
     padding-left: 10%;
-    border-bottom: 3px solid rgb(0 200 255 /100%);
+    border-bottom: 3px solid rgb(0 150 255 /100%);
 }
 
 .navbar a {
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: rgb(242 242 242 / 100%);
     text-align: center;
     padding: 15px 25px;
     text-decoration: none;
@@ -304,15 +363,30 @@ p {
     margin-right: auto;
 }
 
+.page-container-narrow {
+    background-color: rgb(255 255 255 /100%);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 20px;    
+    align-self:  start;
+    max-height: 100%;
+    height: 100%;
+    width: 40%;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .profile-pic {
     position: relative;
-    width: 80%;
+    width: 60%;
     margin-top: 50px;
 }
 
 .project-heading {
     margin-top: 0px;
-    background-color: rgb(50 150 225 /60%);
+    background-color: rgb(0 150 225 / 100%);
     font-family: Arial;
     font-size: 14pt;
     color: rgb(255 255 255 /100%);
@@ -325,6 +399,27 @@ p {
 
 .project-image-out {
     transform: skew(0deg);
+}
+
+.skill-heading {
+    font-family: Helvetica;
+    font-size: 16pt;
+    font-weight: 500;
+    color: rgb(0 150 225 / 100%);
+}
+
+.skill-list {
+    list-style-image: url(../graphics/icons/ci-bullet.png);
+	font-family: Verdana;
+	font-size: 12pt;
+	font-style: normal;
+	font-weight: normal;
+	color: rgb(0 0 0 /100%);
+}
+
+.skill-list li {
+    padding: 3px;
+	margin-left: -25px;
 }
 
 .tal {
@@ -453,7 +548,5 @@ p {
     }
     
 }
-
-
 
 
