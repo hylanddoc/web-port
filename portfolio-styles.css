@@ -409,7 +409,7 @@ p {
 }
 
 .skill-list {
-    list-style-image: url(../graphics/icons/ci-bullet.png);
+    list-style-image: url(ci-bullet.png);
 	font-family: Verdana;
 	font-size: 12pt;
 	font-style: normal;
