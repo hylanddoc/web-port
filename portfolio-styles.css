@@ -409,7 +409,7 @@ p {
 }
 
 .skill-list {
-    list-style-image: url(ci-bullet.png);
+    list-style-image: url(../graphics/icons/ci-bullet.png);
 	font-family: Verdana;
 	font-size: 12pt;
 	font-style: normal;
@@ -488,6 +488,12 @@ p {
     .grid-container-3eqcols {
         grid-template-columns: 1fr;  
     }
+    .grid-container-3x2cols {
+        grid-template-columns: 1fr;  
+    }
+    .grid-container-skills {
+        grid-template-columns: 1fr;  
+    }
     .home-page-container{
         grid-template-columns: 1fr;
         margin-left: 0%;
@@ -513,6 +519,9 @@ p {
         width: 80%;
         padding-left: 10%;
     }
+    .tar {
+        text-align: left;
+    }
     .thisnavitem {
         display: none;
     }
@@ -526,6 +535,12 @@ p {
         display: inline;
     }
     .grid-container-3eqcols {
+        grid-template-columns: 1fr;  
+    }
+    .grid-container-3x2cols {
+        grid-template-columns: 1fr;  
+    }
+    .grid-container-skills {
         grid-template-columns: 1fr;  
     }
     .home-page-container{
@@ -546,7 +561,11 @@ p {
         width: 80%;
         padding-left: 10%;
     }
-    
+    .tar {
+        text-align: left;
+    }
 }
+
+
 
 
